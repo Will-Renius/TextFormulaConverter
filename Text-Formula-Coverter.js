@@ -7,7 +7,7 @@ function textToFunction() {
     for(var j = 0; j < values.length; j++){
       if(!range.getCell(j+1, i+1).isBlank()){
         values[j][i] = "=" + values[j][i];
-        if(left(values[j][i], 2) == "==" { // Test for == at beginning of formula. If present, fix it.
+        if(left(values[j][i], 2) == "=="){ // Test for == at beginning of formula. If present, fix it.
           values[j][i] = right(values[j][i], len(values[j][i])-1);
         }
       }
