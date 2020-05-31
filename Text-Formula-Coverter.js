@@ -7,7 +7,9 @@ function textToFunction() {
     for(var j = 0; j < values.length; j++){
       if(!range.getCell(j+1, i+1).isBlank()){
         values[j][i] = "=" + values[j][i];
-        values[j][i] = values[j][i].replace("==", "="); // Fixes problem created if text came from FORMULATEXT function.
+        if(left(values[j][i], 2) == "==" { // Test for == at beginning of formula. If present, fix it.
+          values[j][i] = right(values[j][i], len(values[j][i])-1);
+        }
       }
       
     }
